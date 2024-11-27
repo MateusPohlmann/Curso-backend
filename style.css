@@ -1,0 +1,50 @@
+/* resetando as margens e paddings*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+} 
+/*estilos do corpo da pagina*/
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex; /*traz flexibilidade aos elementos da pagina*/
+    justify-content: center;/*centralizando os elementos*/
+    align-items: center;
+    min-height: 100vh; /*visualização*/
+    background-color: rgb(219, 25, 25); /*cor do fundo*/
+}
+.container{
+    background-color: rgb(63, 198, 231); /*cor de fundo do container*/
+    border-radius: 10px; /*bordas arredondadas*/
+    box-shadow: 0 4px 20px rgb(65, 202, 24);  /*sombra suave*/
+    padding: 40px; /*preencimento*/
+    text-align: center;
+    width: 80%;
+    max-width: 500px; /*largura maxima do container*/
+}
+h1{
+    font-size: 2.5rem; /*tamanho da fonte*/
+    color:cornsilk; /*cor da fonte h1*/
+    margin-bottom: 20px;
+}
+/*estilo do paragrafo*/
+p{
+    font-size: 1.2rem;
+    color: skyblue;
+    margin-bottom: 30px;
+}
+/*estilo botão*/
+button{
+    padding: 12px 25px;
+    background-color: rgb(255, 64, 0);
+    color: darkslategray;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;/*ao se aproximar a seta vira uma mão*/
+    transition: background-color 0.3s;
+}
+/*efeito de houver no botão*/
+button:hover{
+    background-color: whitesmoke;
+}
