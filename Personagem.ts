@@ -5,13 +5,15 @@ export interface Personagem {
     getVida(): number
     setVida(vida: number): void
 
-    getForça(): number
-    setForça(força: number): void
+    getNacio(): string
+    setNacio(nacio: string): void
 
-    getDefesa(): number
-    setDefesa(defesa: number): void
+    getEstiloLuta(): string
+    setEstiloLuta(estiloLuta: string): void
 
-    atacar(inimigo: Personagem): void
+    golpeLeve(): void
 
-    perderVida(dano: number): void
+    golpePesado(): void
+
+    golpeEspecial(): void
 }
