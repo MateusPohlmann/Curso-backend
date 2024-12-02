@@ -1,0 +1,5 @@
+let zangief = new PersonagemImpl("João", 100, "Brasil", "Karate");
+console.log(zangief.getNome());  // João
+console.log(zangief.golpeLeve());  // Dano gerado aleatoriamente entre 1 e 15
+console.log(zangief.golpePesado());  // Dano gerado aleatoriamente entre 1 e 30
+console.log(zangief.golpeEspecial());  // Sempre entre 20 e 30

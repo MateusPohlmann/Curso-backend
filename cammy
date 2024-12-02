@@ -1,0 +1,5 @@
+let cammy = new PersonagemImpl("João", 100, "Brasil", "Karate");
+console.log(cammy.getNome());  // João
+console.log(cammy.golpeLeve());  // Dano gerado aleatoriamente entre 1 e 15
+console.log(cammy.golpePesado());  // Dano gerado aleatoriamente entre 1 e 30
+console.log(cammy.golpeEspecial());  // Sempre entre 20 e 30

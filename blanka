@@ -1,0 +1,5 @@
+let blanka = new PersonagemImpl("João", 100, "Brasil", "Karate");
+console.log(blanka.getNome());  // João
+console.log(blanka.golpeLeve());  // Dano gerado aleatoriamente entre 1 e 15
+console.log(blanka.golpePesado());  // Dano gerado aleatoriamente entre 1 e 30
+console.log(blanka.golpeEspecial());  // Sempre entre 20 e 30

@@ -1,0 +1,5 @@
+let ryu = new PersonagemImpl("João", 100, "Brasil", "Karate");
+console.log(ryu.getNome());  // João
+console.log(ryu.golpeLeve());  // Dano gerado aleatoriamente entre 1 e 15
+console.log(ryu.golpePesado());  // Dano gerado aleatoriamente entre 1 e 30
+console.log(ryu.golpeEspecial());  // Sempre entre 20 e 30

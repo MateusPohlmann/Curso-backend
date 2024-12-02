@@ -1,0 +1,5 @@
+let ken = new PersonagemImpl("João", 100, "Brasil", "Karate");
+console.log(ken.getNome());  // João
+console.log(ken.golpeLeve());  // Dano gerado aleatoriamente entre 1 e 15
+console.log(ken.golpePesado());  // Dano gerado aleatoriamente entre 1 e 30
+console.log(ken.golpeEspecial());  // Sempre entre 20 e 30
