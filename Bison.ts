@@ -5,6 +5,8 @@ export class Bison implements Personagem {
     private vida: number
     private nacionalidade: string
     private estiloLuta: string
+    private barraEspecial: number
+    private podeEspecial: boolean = true
 
     constructor(nome: string, vida: number, nacionalidade: string, estiloLuta: string) {
         this.nome = nome
@@ -41,6 +43,20 @@ export class Bison implements Personagem {
         this.estiloLuta = estiloLuta
     }
 
+    public getBarraEpecial(): number {
+        return this.barraEspecial
+    }
+    public setBarraEspecial(barraEspecial: number): void {
+        this.barraEspecial = barraEspecial
+    }
+
+    public getPodeEspecial(): boolean{
+        return this.podeEspecial
+    }
+    public setPodeEspecial(podeEspecial: boolean): void {
+        this.podeEspecial = podeEspecial
+    }
+
     public golpeLeve(): void {
         console.log(`Psycho Crusher!`)
         let dano = Math.floor(Math.random() * 100)
@@ -60,11 +76,13 @@ export class Bison implements Personagem {
     }
 
     public golpeEspecial(): void{
+        if (this.podeEspecial === true && this.barraEspecial === 15) {
         console.log(`Psycho Impact!!!`)
         let dano = Math.floor(Math.random() * 100)
         while(!(dano > 30 && dano < 50)){
             dano = Math.floor(Math.random() * 100)
         }
         console.log(`Causou ${dano} de dano!`)
+    }
     }
 }

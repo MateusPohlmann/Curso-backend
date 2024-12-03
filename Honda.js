@@ -1,76 +1,76 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Ryu = void 0;
-var Ryu = /** @class */ (function () {
-    function Ryu(nome, vida, nacionalidade, estiloLuta) {
+exports.Honda = void 0;
+var Honda = /** @class */ (function () {
+    function Honda(nome, vida, nacionalidade, estiloLuta) {
         this.podeEspecial = true;
         this.nome = nome;
         this.vida = vida;
         this.nacionalidade = nacionalidade;
         this.estiloLuta = estiloLuta;
     }
-    Ryu.prototype.getNome = function () {
+    Honda.prototype.getNome = function () {
         return this.nome;
     };
-    Ryu.prototype.setNome = function (nome) {
+    Honda.prototype.setNome = function (nome) {
         this.nome = nome;
     };
-    Ryu.prototype.getVida = function () {
+    Honda.prototype.getVida = function () {
         return this.vida;
     };
-    Ryu.prototype.setVida = function (vida) {
+    Honda.prototype.setVida = function (vida) {
         this.vida = vida;
     };
-    Ryu.prototype.getNacio = function () {
+    Honda.prototype.getNacio = function () {
         return this.nacionalidade;
     };
-    Ryu.prototype.setNacio = function (nacio) {
+    Honda.prototype.setNacio = function (nacio) {
         this.nacionalidade = nacio;
     };
-    Ryu.prototype.getEstiloLuta = function () {
+    Honda.prototype.getEstiloLuta = function () {
         return this.estiloLuta;
     };
-    Ryu.prototype.setEstiloLuta = function (estiloLuta) {
+    Honda.prototype.setEstiloLuta = function (estiloLuta) {
         this.estiloLuta = estiloLuta;
     };
-    Ryu.prototype.getBarraEpecial = function () {
+    Honda.prototype.getBarraEpecial = function () {
         return this.barraEspecial;
     };
-    Ryu.prototype.setBarraEspecial = function (barraEspecial) {
+    Honda.prototype.setBarraEspecial = function (barraEspecial) {
         this.barraEspecial = barraEspecial;
     };
-    Ryu.prototype.getPodeEspecial = function () {
+    Honda.prototype.getPodeEspecial = function () {
         return this.podeEspecial;
     };
-    Ryu.prototype.setPodeEspecial = function (podeEspecial) {
+    Honda.prototype.setPodeEspecial = function (podeEspecial) {
         this.podeEspecial = podeEspecial;
     };
-    Ryu.prototype.golpeLeve = function () {
-        console.log("Hadouken!");
+    Honda.prototype.golpeLeve = function () {
+        console.log("Hyakuretsu Harite!");
         var dano = Math.floor(Math.random() * 100);
-        while (!(dano > 5 && dano < 15)) {
+        while (!(dano > 5 && dano < 10)) {
             dano = Math.floor(Math.random() * 100);
         }
         console.log("Causou ".concat(dano, " de dano!"));
     };
-    Ryu.prototype.golpePesado = function () {
-        console.log("Shoryuken!!");
+    Honda.prototype.golpePesado = function () {
+        console.log("Sumo Headbutt!!");
         var dano = Math.floor(Math.random() * 100);
-        while (!(dano > 15 && dano < 30)) {
+        while (!(dano > 10 && dano < 20)) {
             dano = Math.floor(Math.random() * 100);
         }
         console.log("Causou ".concat(dano, " de dano!"));
     };
-    Ryu.prototype.golpeEspecial = function () {
-        if (this.podeEspecial === true && this.barraEspecial === 15) {
-            console.log("Metsu Hadouken!!!");
+    Honda.prototype.golpeEspecial = function () {
+        if (this.podeEspecial === true && this.barraEspecial === 13) {
+            console.log("Oicho Throw!!!");
             var dano = Math.floor(Math.random() * 100);
-            while (!(dano > 30 && dano < 50)) {
+            while (!(dano > 20 && dano < 40)) {
                 dano = Math.floor(Math.random() * 100);
             }
             console.log("Causou ".concat(dano, " de dano!"));
         }
     };
-    return Ryu;
+    return Honda;
 }());
-exports.Ryu = Ryu;
+exports.Honda = Honda;

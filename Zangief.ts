@@ -5,6 +5,8 @@ export class Zangief implements Personagem {
     private vida: number
     private nacionalidade: string
     private estiloLuta: string
+    private barraEspecial: number
+    private podeEspecial: boolean = true
 
     constructor(nome: string, vida: number, nacionalidade: string, estiloLuta: string) {
         this.nome = nome
@@ -41,6 +43,19 @@ export class Zangief implements Personagem {
         this.estiloLuta = estiloLuta
     }
 
+    public getBarraEpecial(): number {
+        return this.barraEspecial
+    }
+    public setBarraEspecial(barraEspecial: number): void {
+        this.barraEspecial = barraEspecial
+    }
+
+    public getPodeEspecial(): boolean {
+        return this.podeEspecial
+    }
+    public setPodeEspecial(podeEspecial: boolean): void {
+        this.podeEspecial = podeEspecial
+    }
     public golpeLeve(): void {
         console.log(`Lariat!`)
         let dano = Math.floor(Math.random() * 100)
@@ -62,12 +77,14 @@ export class Zangief implements Personagem {
     }
 
     public golpeEspecial(): void {
-        console.log(`Final Atomic Buster!!!`)
-        let dano = Math.floor(Math.random() * 100)
+        if (this.podeEspecial === true && this.barraEspecial === 15) {
+            console.log(`Final Atomic Buster!!!`)
+            let dano = Math.floor(Math.random() * 100)
 
-        while (!(dano > 35 && dano < 50)) {
-            dano = Math.floor(Math.random() * 100)
+            while (!(dano > 35 && dano < 50)) {
+                dano = Math.floor(Math.random() * 100)
+            }
+            console.log(`Causou ${dano} de dano!`)
         }
-        console.log(`Causou ${dano} de dano!`)
     }
 }

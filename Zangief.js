@@ -1,76 +1,76 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Ryu = void 0;
-var Ryu = /** @class */ (function () {
-    function Ryu(nome, vida, nacionalidade, estiloLuta) {
+exports.Zangief = void 0;
+var Zangief = /** @class */ (function () {
+    function Zangief(nome, vida, nacionalidade, estiloLuta) {
         this.podeEspecial = true;
         this.nome = nome;
         this.vida = vida;
         this.nacionalidade = nacionalidade;
         this.estiloLuta = estiloLuta;
     }
-    Ryu.prototype.getNome = function () {
+    Zangief.prototype.getNome = function () {
         return this.nome;
     };
-    Ryu.prototype.setNome = function (nome) {
+    Zangief.prototype.setNome = function (nome) {
         this.nome = nome;
     };
-    Ryu.prototype.getVida = function () {
+    Zangief.prototype.getVida = function () {
         return this.vida;
     };
-    Ryu.prototype.setVida = function (vida) {
+    Zangief.prototype.setVida = function (vida) {
         this.vida = vida;
     };
-    Ryu.prototype.getNacio = function () {
+    Zangief.prototype.getNacio = function () {
         return this.nacionalidade;
     };
-    Ryu.prototype.setNacio = function (nacio) {
+    Zangief.prototype.setNacio = function (nacio) {
         this.nacionalidade = nacio;
     };
-    Ryu.prototype.getEstiloLuta = function () {
+    Zangief.prototype.getEstiloLuta = function () {
         return this.estiloLuta;
     };
-    Ryu.prototype.setEstiloLuta = function (estiloLuta) {
+    Zangief.prototype.setEstiloLuta = function (estiloLuta) {
         this.estiloLuta = estiloLuta;
     };
-    Ryu.prototype.getBarraEpecial = function () {
+    Zangief.prototype.getBarraEpecial = function () {
         return this.barraEspecial;
     };
-    Ryu.prototype.setBarraEspecial = function (barraEspecial) {
+    Zangief.prototype.setBarraEspecial = function (barraEspecial) {
         this.barraEspecial = barraEspecial;
     };
-    Ryu.prototype.getPodeEspecial = function () {
+    Zangief.prototype.getPodeEspecial = function () {
         return this.podeEspecial;
     };
-    Ryu.prototype.setPodeEspecial = function (podeEspecial) {
+    Zangief.prototype.setPodeEspecial = function (podeEspecial) {
         this.podeEspecial = podeEspecial;
     };
-    Ryu.prototype.golpeLeve = function () {
-        console.log("Hadouken!");
+    Zangief.prototype.golpeLeve = function () {
+        console.log("Lariat!");
         var dano = Math.floor(Math.random() * 100);
         while (!(dano > 5 && dano < 15)) {
             dano = Math.floor(Math.random() * 100);
         }
         console.log("Causou ".concat(dano, " de dano!"));
     };
-    Ryu.prototype.golpePesado = function () {
-        console.log("Shoryuken!!");
+    Zangief.prototype.golpePesado = function () {
+        console.log("Spinning Piledriver!!");
         var dano = Math.floor(Math.random() * 100);
         while (!(dano > 15 && dano < 30)) {
             dano = Math.floor(Math.random() * 100);
         }
         console.log("Causou ".concat(dano, " de dano!"));
     };
-    Ryu.prototype.golpeEspecial = function () {
+    Zangief.prototype.golpeEspecial = function () {
         if (this.podeEspecial === true && this.barraEspecial === 15) {
-            console.log("Metsu Hadouken!!!");
+            console.log("Final Atomic Buster!!!");
             var dano = Math.floor(Math.random() * 100);
-            while (!(dano > 30 && dano < 50)) {
+            while (!(dano > 35 && dano < 50)) {
                 dano = Math.floor(Math.random() * 100);
             }
             console.log("Causou ".concat(dano, " de dano!"));
         }
     };
-    return Ryu;
+    return Zangief;
 }());
-exports.Ryu = Ryu;
+exports.Zangief = Zangief;

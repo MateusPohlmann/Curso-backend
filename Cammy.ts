@@ -5,6 +5,8 @@ export class Cammy implements Personagem {
     private vida: number
     private nacionalidade: string
     private estiloLuta: string
+    private barraEspecial: number
+    private podeEspecial: boolean = true
 
     constructor(nome: string, vida: number, nacionalidade: string, estiloLuta: string) {
         this.nome = nome
@@ -41,30 +43,46 @@ export class Cammy implements Personagem {
         this.estiloLuta = estiloLuta
     }
 
+    public getBarraEpecial(): number {
+        return this.barraEspecial
+    }
+    public setBarraEspecial(barraEspecial: number): void {
+        this.barraEspecial = barraEspecial
+    }
+
+    public getPodeEspecial(): boolean {
+        return this.podeEspecial
+    }
+    public setPodeEspecial(podeEspecial: boolean): void {
+        this.podeEspecial = podeEspecial
+    }
+
     public golpeLeve(): void {
         console.log(`Spiral Arrow!`)
         let dano = Math.floor(Math.random() * 100)
-        while(!(dano > 5 && dano < 15)){
+        while (!(dano > 5 && dano < 15)) {
             dano = Math.floor(Math.random() * 100)
         }
         console.log(`Causou ${dano} de dano!`)
     }
 
-    public golpePesado(): void{
+    public golpePesado(): void {
         console.log(`Cannon Spike!!`)
         let dano = Math.floor(Math.random() * 100)
-        while(!(dano > 15 && dano < 25)){
+        while (!(dano > 15 && dano < 25)) {
             dano = Math.floor(Math.random() * 100)
         }
         console.log(`Causou ${dano} de dano!`)
     }
 
-    public golpeEspecial(): void{
-        console.log(`Hooligan Combination!!!`)
-        let dano = Math.floor(Math.random() * 100)
-        while(!(dano > 20 && dano < 40)){
-            dano = Math.floor(Math.random() * 100)
+    public golpeEspecial(): void {
+        if (this.podeEspecial === true && this.barraEspecial === 12) {
+            console.log(`Hooligan Combination!!!`)
+            let dano = Math.floor(Math.random() * 100)
+            while (!(dano > 20 && dano < 40)) {
+                dano = Math.floor(Math.random() * 100)
+            }
+            console.log(`Causou ${dano} de dano!`)
         }
-        console.log(`Causou ${dano} de dano!`)
     }
 }

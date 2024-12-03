@@ -11,6 +11,12 @@ export interface Personagem {
     getEstiloLuta(): string
     setEstiloLuta(estiloLuta: string): void
 
+    getBarraEpecial(): number
+    setBarraEspecial(barraEspecial: number): void
+
+    getPodeEspecial(): boolean
+    setPodeEspecial(podeEspecial: boolean): void 
+
     golpeLeve(): void
 
     golpePesado(): void
